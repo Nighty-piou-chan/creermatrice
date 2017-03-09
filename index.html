@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>javascript</title>
+		<style>
+			#matrice {
+				display: flex;
+				justify-content: space-around;
+				flex-direction: row;
+			}
+		</style>
+		<script>
+		/*var i;
+		for (i = 0; i < 4; i++) {
+			console.log(i + 1);
+			}
+		while(i < 8) {
+			console.log(i);
+				i += 1;
+			}
+
+			i = 0;
+		do {
+			i = window.prompt("saisir la nouvelle val de i");
+			i = Number(i);
+		}
+		while(i<100 || isNaN(i));
+
+		var tab = [1,2,3,4,5];
+
+		tab.forEach(function(ele, i) {
+			console.log("case n°" + i)
+			console.log(ele);
+		});
+
+		var prop, chanteur = { name: "Johnny", age: 65, profession: "rocker"};
+		for (prop in chanteur) {
+			console.log(chanteur[prop]);
+		}*/
+
+		var main = (function main() {
+					window.onload = function start() {
+						creerMatrice(10);
+					};
+				}());
+
+				var creerMatrice = function creerMatrice(x) {
+				//V1 utiliser for
+				//combiné avec document.createElement()
+				//pour fabriquer une ligne de 10 cases numérotées
+				//à partir de divs...stylisées en CSS
+				var matrice = document.createElement("div");
+				matrice.id = "matrice";
+				document.body.appendChild(matrice);
+
+					for (i = 0; i < x; i += 1) {
+
+						var i, div, cible;
+						
+						divLittle = document.createElement("div");
+						divLittle.id = "ligne_"+ (i + 1);
+						divLittle.class = "row";
+						//document.body.insertBefore(div, divLittle);
+
+						for (var j = 0; j < x; j++) {
+
+							cible = document.getElementById("matrice");
+							div = document.createElement("div");
+							
+
+							for (var f = 0; f < x; f++) {
+								divInterne = document.getElementById('ligne_');
+								console.log(divInterne);
+								div = document.createElement("div");
+								div.innerHTML = (i + 1);
+							}
+							
+						//console.log(div);
+						}
+
+						matrice.appendChild(divLittle);
+					}
+				};
+				//creerMatrice()
+				
+				//V2 utiliser une boucle for imbriquée
+				//combiné avec document.createElement()
+				//pour fabriquer 10 lignes de 10 cases numérotées
+				//de 1 à 100
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
